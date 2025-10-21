@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NEO Converter</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="assets/icon.png" type="image/png" />
+</head>
+<body>
+  <div class="app-container">
+    <header>
+      <img src="assets/icon.png" alt="NEO Logo" class="logo" />
+      <h1>NEO Converter</h1>
+      <p class="tagline">Convert Anything, Anywhere – <strong>Made by NEO</strong></p>
+    </header>
+
+    <main>
+      <div class="converter">
+        <label for="category">📂 Select Category:</label>
+        <select id="category">
+          <option value="">-- Choose --</option>
+          <option value="length">📏 Length</option>
+          <option value="temperature">🌡️ Temperature</option>
+          <option value="weight">⚖️ Weight</option>
+          <option value="time">⏰ Time</option>
+          <option value="volume">💧 Volume</option>
+          <option value="area">📐 Area</option>
+          <option value="speed">💨 Speed</option>
+          <option value="energy">⚡ Energy</option>
+          <option value="pressure">🔋 Pressure</option>
+        </select>
+
+        <label for="from">🔁 From:</label>
+        <select id="from"></select>
+
+        <label for="to">➡️ To:</label>
+        <select id="to"></select>
+
+        <label for="input">🔢 Value:</label>
+        <input type="number" id="input" placeholder="Enter value" />
+
+        <button onclick="convert()">🚀 Convert</button>
+
+        <div id="result">💡 Result will appear here...</div>
+      </div>
+    </main>
+
+    <footer>
+      <p>🔵 Powered by <strong>NEO – Next Evolution of Oneness</strong></p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function () {
+      navigator.serviceWorker.register('./service-worker.js')
+        .then(function (registration) {
+          console.log('✅ Service Worker registered:', registration.scope);
+        }, function (error) {
+          console.log('❌ Service Worker registration failed:', error);
+        });
+    });
+  }
+</script>
+</body>
+</html>
