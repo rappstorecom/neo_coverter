@@ -1,0 +1,19 @@
+{
+  "name": "NEO Converter",
+  "short_name": "Converter",
+  "start_url": "complete_app/neo_converter/index.html",
+  "display": "standalone",
+  "background_color": "#111827",
+  "theme_color": "#10B981",
+  "orientation": "portrait",
+  "scope": "./",
+  "description": "Convert 5+ unit categories including length, weight, temperature, speed, and more. Fast, offline, and secure!",
+  "icons": [
+    {
+      "src": "assets/icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
